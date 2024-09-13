@@ -9,9 +9,9 @@ app.use(express.json());
 
 // Swagger setup
 var path = require('path');
-var swagger_path =  path.resolve(__dirname,'./swagger.yaml');
+var swagger_path =  path.resolve('./swagger.yaml');
 console.log(swagger_path);
-const swaggerDocument = YAML.load('/swagger.yaml');
+const swaggerDocument = YAML.load('/opt/render/project/src/swagger.yaml');
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
