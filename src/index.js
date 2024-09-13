@@ -8,7 +8,7 @@ const port = 3000;
 app.use(express.json());
 
 // Swagger setup
-const swaggerDocument = YAML.load('./swagger.yaml');
+const swaggerDocument = YAML.load('swagger.yaml');
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Routes
